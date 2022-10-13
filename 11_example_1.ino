@@ -85,7 +85,7 @@ void loop() {
   }else if (dist_raw >= _TARGET_HIGH){
     myservo.writeMicroseconds(_DUTY_MAX);
   }else {
-    myservo.writeMicroseconds((dist_ema - _DIST_MIN) * 10.8 + _DUTY_MIN);
+    myservo.writeMicroseconds((dist_ema - _TARGET_LOW) * 10.8 + _DUTY_MIN);
   }
   
 
